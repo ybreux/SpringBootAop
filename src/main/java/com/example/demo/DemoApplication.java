@@ -11,10 +11,7 @@ public class DemoApplication {
 
     public static void main(String[] args) throws Exception {
 
-//        SpringApplication.run(DemoApplication.class, args);
-        ApplicationContext context = new AnnotationConfigApplicationContext(DemoApplication.class);
-
-        System.out.println("TOTO");
+        final ApplicationContext context = new AnnotationConfigApplicationContext(DemoApplication.class);
         MyService service = (MyService) context.getBean("myService");
         service.method();
     }
